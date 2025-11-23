@@ -1,4 +1,4 @@
-# RAPTOR - AI Offensive/Defensive Research Framework
+# RAPTOR - Autonomous Offensive/Defensive Research Framework
 
 Safe operations (install, scan, read, generate): DO IT.
 Dangerous operations (apply patches, delete, git push): ASK FIRST.

@@ -1,7 +1,5 @@
-# RAPTOR Binary Fuzzer
+# /fuzz - RAPTOR Binary Fuzzer
 
-**Sanity check:** If input doesn't look like binary executable, STOP and tell user the correct tool.
-- /fuzz is for: Binary executables
-- Not for: URLs (use /web) or source code (use /scan)
+Alias for /raptor-fuzz
 
-Run: `python3 raptor.py fuzz --binary <path> --duration <seconds>`
+See: raptor-fuzz.md

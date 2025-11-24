@@ -1,7 +1,5 @@
-# RAPTOR Web Scanner
+# /web - RAPTOR Web Application Scanner
 
-**Sanity check:** If input doesn't look like URL/web address, STOP and tell user the correct tool.
-- /web is for: URLs, web addresses
-- Not for: Local paths (use /scan) or binaries (use /fuzz)
+Alias for /raptor-web
 
-Run: `python3 raptor.py web --url <url>`
+See: raptor-web.md

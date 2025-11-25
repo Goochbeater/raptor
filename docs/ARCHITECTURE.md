@@ -190,7 +190,7 @@ raptor/
 ├── raptor_codeql.py                # CodeQL workflow orchestrator
 ├── raptor_fuzzing.py               # Binary fuzzing workflow
 ├── raptor-offset                   # ASCII art banner
-├── quotes                          # Random security quotes
+├── hackers-8ball                   # Random security quotes
 ├── requirements.txt                # Python dependencies
 ├── CLAUDE.md                       # Claude Code instructions
 ├── CLAUDE_CODE_QUICKSTART.md       # Quick start guide

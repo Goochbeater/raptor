@@ -5,8 +5,11 @@ version: 1.0
 author: mbrg
 tags:
   - github
-  - bigquery
   - gharchive
+  - security
+  - osint
+  - forensics
+  - git
 ---
 
 # GitHub Archive

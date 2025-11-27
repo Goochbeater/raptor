@@ -8,6 +8,7 @@ tags:
   - git
   - forensics
   - recovery
+  - osint
 ---
 
 # GitHub Commit Recovery

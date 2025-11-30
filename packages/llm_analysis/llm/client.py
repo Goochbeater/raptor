@@ -119,6 +119,8 @@ class LLMClient:
 
         Returns:
             LLMResponse with generated content
+
+        Warning: Not thread-safe. Use locks if enabling concurrent access.
         """
         # Check budget
         if not self._check_budget():
@@ -207,6 +209,8 @@ class LLMClient:
 
         Returns:
             Tuple of (parsed JSON object matching schema, full response content)
+
+        Warning: Not thread-safe. Use locks if enabling concurrent access.
         """
         # Check budget
         if not self._check_budget():

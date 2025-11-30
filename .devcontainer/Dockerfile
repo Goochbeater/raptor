@@ -144,6 +144,9 @@ COPY packages/web/requirements.txt /tmp/packages-web-requirements.txt
 
 RUN pip install --no-cache-dir -r /tmp/requirements-dev.txt
 
+# Install web package dependencies (includes playwright)
+RUN pip install --no-cache-dir -r /tmp/packages-web-requirements.txt
+
 # Install Playwright browser binaries
 RUN python -m playwright install
 

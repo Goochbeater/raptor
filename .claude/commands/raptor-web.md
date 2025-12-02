@@ -1,4 +1,4 @@
-# RAPTOR Web Application Scanner
+# CaPO Web Application Scanner
 
 You are helping the user scan a web application for security vulnerabilities.
 
@@ -9,7 +9,7 @@ You are helping the user scan a web application for security vulnerabilities.
    - Ask about authentication if needed
    - Ask about scope (crawl depth, max pages)
 
-2. **Run RAPTOR web scan**: Execute the web scanning command:
+2. **Run CaPO web scan**: Execute the web scanning command:
    ```bash
    python3 raptor.py web --url <url>
    ```

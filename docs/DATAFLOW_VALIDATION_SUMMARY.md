@@ -1,4 +1,4 @@
-# RAPTOR Dataflow Validation - Implementation Summary
+# CaPO Dataflow Validation - Implementation Summary
 
 ## Mission: Separate Real Vulnerabilities from False Positives
 
@@ -130,7 +130,7 @@ The LLM provides structured output:
 
 #### 4. Verdict Integration
 
-Based on validation results, RAPTOR automatically:
+Based on validation results, CaPO automatically:
 
 **IF FALSE POSITIVE:**
 ```python
@@ -155,7 +155,7 @@ logger.info("✓ Validation confirms EXPLOITABLE")
 
 #### 5. Validation Output
 
-For each validated dataflow, RAPTOR saves:
+For each validated dataflow, CaPO saves:
 
 1. **Validation JSON**: `out/validation/{finding_id}_validation.json`
    - Complete validation assessment
@@ -176,7 +176,7 @@ For each validated dataflow, RAPTOR saves:
 
 ## Validation Metrics
 
-RAPTOR tracks:
+CaPO tracks:
 - **dataflow_validated**: Number of dataflow paths deep-validated
 - **false_positives_caught**: False positives identified by validation
 - **exploitability_confidence**: Refined exploitability scores
@@ -358,7 +358,7 @@ SINK: response.getWriter().write("<div>" + name + "</div>") (line 20)
 Dataflow validation runs automatically when:
 1. CodeQL scan includes dataflow findings
 2. LLM analysis marks finding as exploitable
-3. RAPTOR has access to an LLM
+3. CaPO has access to an LLM
 
 No special flags needed!
 
@@ -414,7 +414,7 @@ SO MANY! I guess this will be the biggest amount of research in the next few mon
 
 ## Summary
 
-Ideally we want dataflow validation to transform RAPTOR from a **pattern matcher** into an **intelligent security analyst** that:
+Ideally we want dataflow validation to transform CaPO from a **pattern matcher** into an **intelligent security analyst** that:
 
 ✅ Understands complete attack paths
 ✅ Validates source control rigorously

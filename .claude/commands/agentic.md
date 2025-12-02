@@ -1,4 +1,4 @@
-# /agentic - RAPTOR Full Autonomous Workflow
+# /agentic - CaPO Full Autonomous Workflow
 
 🤖 **AGENTIC MODE** - This will autonomously:
 1. Scan code with Semgrep/CodeQL

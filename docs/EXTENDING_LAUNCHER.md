@@ -1,10 +1,10 @@
-# Extending the RAPTOR Unified Launcher
+# Extending the CaPO Unified Launcher
 
 This guide explains how to add new security scanning engines or tools to the unified `raptor.py` launcher.
 
 ## Overview
 
-The unified launcher (`raptor.py`) provides a single entry point for all RAPTOR capabilities. Adding a new engine is straightforward and requires minimal code changes.
+The unified launcher (`raptor.py`) provides a single entry point for all CaPO capabilities. Adding a new engine is straightforward and requires minimal code changes.
 
 ## Benefits of the Unified Launcher
 
@@ -43,7 +43,7 @@ from pathlib import Path
 # Add to path for core imports
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from core.config import RaptorConfig
+from core.config import CaPOConfig
 from core.logging import get_logger
 
 logger = get_logger()
@@ -163,7 +163,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from core.config import RaptorConfig
+from core.config import CaPOConfig
 from core.logging import get_logger
 
 logger = get_logger()
@@ -207,7 +207,7 @@ def main():
     results = scan_dependencies(repo_path)
     
     # Save results
-    out_dir = Path(args.out) if args.out else RaptorConfig.get_out_dir() / "dependency-scan"
+    out_dir = Path(args.out) if args.out else CaPOConfig.get_out_dir() / "dependency-scan"
     out_dir.mkdir(parents=True, exist_ok=True)
     
     output_file = out_dir / "dependency_report.json"
@@ -293,20 +293,20 @@ Your scanner should have:
 
 ### 4. Use Core Utilities
 
-Import and use RAPTOR's core utilities:
+Import and use CaPO's core utilities:
 
 ```python
-from core.config import RaptorConfig  # For paths
+from core.config import CaPOConfig  # For paths
 from core.logging import get_logger   # For logging
 from core.sarif.parser import parse_sarif  # For SARIF handling (if needed)
 ```
 
 ### 5. Follow Output Conventions
 
-- Save outputs to `RaptorConfig.get_out_dir() / "your-scanner-name/"`
+- Save outputs to `CaPOConfig.get_out_dir() / "your-scanner-name/"`
 - Use structured formats (JSON, SARIF)
 - Include timestamps in output filenames
-- Log to RAPTOR's audit trail
+- Log to CaPO's audit trail
 
 ## Testing Your Integration
 
@@ -380,7 +380,7 @@ If you need help adding a new scanner:
 
 ## Summary
 
-Adding a new scanner to RAPTOR is simple:
+Adding a new scanner to CaPO is simple:
 
 1. Create `packages/my-scanner/agent.py`
 2. Add `mode_my_scanner()` function to `raptor.py`
@@ -388,4 +388,4 @@ Adding a new scanner to RAPTOR is simple:
 4. Update help text
 5. Test!
 
-The unified launcher makes it easy to expand RAPTOR's capabilities while maintaining a consistent user experience.
+The unified launcher makes it easy to expand CaPO's capabilities while maintaining a consistent user experience.

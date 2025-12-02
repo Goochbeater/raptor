@@ -1,4 +1,4 @@
-# /web - RAPTOR Web Application Scanner
+# /web - CaPO Web Application Scanner
 
 Alias for /raptor-web
 

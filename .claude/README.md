@@ -1,11 +1,11 @@
-# RAPTOR + Claude Code Integration
+# CaPO + Claude Code Integration
 
-This directory contains custom slash commands that let you use RAPTOR with plain English via Claude Code.
+This directory contains custom slash commands that let you use CaPO with plain English via Claude Code.
 
 ## Available Slash Commands
 
-### `/raptor` - General RAPTOR Assistant
-The main command that helps you decide which RAPTOR mode to use.
+### `/raptor` - General CaPO Assistant
+The main command that helps you decide which CaPO mode to use.
 
 **Examples:**
 - "Hey Claude, /raptor - scan my code for vulnerabilities"
@@ -13,7 +13,7 @@ The main command that helps you decide which RAPTOR mode to use.
 - "/raptor - test my web application"
 
 ### `/raptor-scan` - Code Scanning
-Runs RAPTOR's autonomous code scanning (Semgrep + CodeQL + LLM analysis).
+Runs CaPO's autonomous code scanning (Semgrep + CodeQL + LLM analysis).
 
 **Examples:**
 - "/raptor-scan - scan the current directory"
@@ -41,7 +41,7 @@ Scans web applications for OWASP Top 10 vulnerabilities.
 2. **Add your request in plain English** after the dash
 3. **Claude will**:
    - Ask clarifying questions if needed
-   - Run the appropriate RAPTOR command
+   - Run the appropriate CaPO command
    - Analyze the results
    - Summarize vulnerabilities found
    - Show exploits and patches
@@ -53,7 +53,7 @@ Scans web applications for OWASP Top 10 vulnerabilities.
 You: /raptor-scan - scan this directory for secrets and vulnerabilities
 
 Claude: I'll run a comprehensive security scan on the current directory.
-        Let me start by running RAPTOR in agentic mode...
+        Let me start by running CaPO in agentic mode...
 
         [Runs: python3 raptor.py agentic --repo /current/path]
 
@@ -84,13 +84,13 @@ You can use very natural language:
 - "Test /usr/bin/vulnerable_program for crashes"
 - "Scan this repo for hardcoded secrets"
 
-Claude will understand your intent and run the appropriate RAPTOR command!
+Claude will understand your intent and run the appropriate CaPO command!
 
 ## What Happens Behind the Scenes
 
-1. **Slash command loads** the context/instructions for that RAPTOR mode
+1. **Slash command loads** the context/instructions for that CaPO mode
 2. **Claude understands** what you want to test and which parameters to use
-3. **RAPTOR runs** via the Bash tool (python3 raptor.py ...)
+3. **CaPO runs** via the Bash tool (python3 raptor.py ...)
 4. **Results are analyzed** by reading output files from the `out/` directory
 5. **Claude summarizes** findings in plain English
 6. **Next steps offered** - apply patches, explain vulnerabilities, etc.
@@ -113,10 +113,10 @@ Claude will understand your intent and run the appropriate RAPTOR command!
 ## Requirements
 
 - Claude Code CLI installed
-- RAPTOR installed (python3, dependencies)
+- CaPO installed (python3, dependencies)
 - For fuzzing: AFL++ properly configured
 - For full analysis: ANTHROPIC_API_KEY or OPENAI_API_KEY set
 
 ---
 
-**Start using RAPTOR with natural language now!** Just type `/raptor` and tell Claude what you want to test.
+**Start using CaPO with natural language now!** Just type `/raptor` and tell Claude what you want to test.

@@ -1,4 +1,4 @@
-# /test-workflows - Run RAPTOR Test Suite
+# /test-workflows - Run CaPO Test Suite
 
 Runs automated workflow tests to validate all commands and user scenarios.
 
@@ -20,7 +20,7 @@ bash test/test_workflows.sh
 - Exit 0 if all pass, exit 1 if any fail
 
 **Use this to:**
-- Validate RAPTOR after changes
+- Validate CaPO after changes
 - Test workflows before releases
 - Verify all commands work
 - Catch regressions

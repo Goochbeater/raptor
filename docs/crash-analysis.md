@@ -357,9 +357,9 @@ crash-analysis-agent (orchestrator)
                        (loops back to crash-analyzer-agent)
 ```
 
-## Integration with RAPTOR
+## Integration with CaPO
 
-The `/crash-analysis` command integrates with RAPTOR's existing workflow:
+The `/crash-analysis` command integrates with CaPO's existing workflow:
 
 - Can be used standalone or after `/fuzz` finds crashes
 - Output can feed into `/patch` for fix generation

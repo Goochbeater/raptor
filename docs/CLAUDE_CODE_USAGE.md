@@ -1,4 +1,4 @@
-# RAPTOR with Claude Code - Complete Usage Guide
+# CaPO with Claude Code - Complete Usage Guide
 
 ## Available Commands
 
@@ -110,7 +110,7 @@ Claude: [Applies patches using Edit tool]
 User: /scan
    ↓
 CLAUDE.md loads (360t)
-Session greeting: "RAPTOR ready..."
+Session greeting: "CaPO ready..."
    ↓
 Python executes: raptor.py agentic
    ↓

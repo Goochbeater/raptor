@@ -1,4 +1,4 @@
-# RAPTOR: Recursive Autonomous Penetration Testing and Observation Robot
+# CaPO: Recursive Autonomous Penetration Testing and Observation Robot
 
 **Version**: 2.0 (Modular)
 **Purpose**: Autonomous security testing for codebases and binaries
@@ -25,20 +25,20 @@
 
 ## Overview
 
-RAPTOR is an autonomous security testing framework that combines static analysis, dataflow validation, and binary fuzzing with LLM-powered vulnerability analysis. It aims to autonomously identify, validate, and exploit security vulnerabilities with minimal human intervention.
+CaPO is an autonomous security testing framework that combines static analysis, dataflow validation, and binary fuzzing with LLM-powered vulnerability analysis. It aims to autonomously identify, validate, and exploit security vulnerabilities with minimal human intervention.
 
 The framework operates in three distinct modes:
 - **Source Code Analysis Mode**: Static analysis using Semgrep and CodeQL with deep dataflow validation
 - **Binary Fuzzing Mode**: Coverage-guided fuzzing using AFL++ with GDB crash analysis
 - **Crash Analysis Mode**: Autonomous root-cause analysis using rr record-replay, function tracing, and code coverage
 
-RAPTOR leverages Large Language Models to provide intelligent analysis, distinguishing true vulnerabilities from false positives, and generating working exploits and secure patches.
+CaPO leverages Large Language Models to provide intelligent analysis, distinguishing true vulnerabilities from false positives, and generating working exploits and secure patches.
 
 
 
 ## Core Concept
 
-Traditional security tools generate thousands of findings but lack context and exploitability assessment. RAPTOR addresses this by:
+Traditional security tools generate thousands of findings but lack context and exploitability assessment. CaPO addresses this by:
 
 1. **Finding Vulnerabilities**: Using industry-standard tools (Semgrep, CodeQL, AFL++)
 2. **Validating Exploitability**: Deep dataflow analysis to separate true positives from false positives
@@ -56,10 +56,10 @@ The key innovation is **dataflow validation** - using LLM reasoning to determine
 
 ## Architecture
 
-RAPTOR follows a modular architecture with clear separation of concerns:
+CaPO follows a modular architecture with clear separation of concerns:
 
 ```
-RAPTOR-daniel-modular/
+CaPO-daniel-modular/
 ├── core/                   # Shared utilities
 │   ├── config.py           # Centralised configuration
 │   ├── logging.py          # Structured JSONL logging
@@ -166,7 +166,7 @@ SINK: executeQuery(query)
 - Early termination on crash threshold
 
 **Autonomous Corpus Generation**:
-Instead of requiring manual seed inputs, RAPTOR can:
+Instead of requiring manual seed inputs, CaPO can:
 - Analyse binary with `strings` to detect input formats
 - Generate format-specific seeds (JSON, XML, HTTP, CSV)
 - Create goal-directed seeds for specific vulnerabilities (stack overflow, heap corruption, etc.)
@@ -186,7 +186,7 @@ Instead of requiring manual seed inputs, RAPTOR can:
 - Memory layout analysis
 
 **ASan Support**:
-When binaries are compiled with ASan (`-fsanitize=address`), RAPTOR automatically:
+When binaries are compiled with ASan (`-fsanitize=address`), CaPO automatically:
 - Detects ASan output in crash dumps
 - Extracts precise error types (heap-buffer-overflow, stack-overflow, etc.)
 - Provides source-level stack traces with line numbers
@@ -495,7 +495,7 @@ Phase 4: Output
 ```bash
 # Clone repository
 git clone <repo-url>
-cd RAPTOR-daniel-modular
+cd CaPO-daniel-modular
 
 # Install Python dependencies
 pip3 install anthropic openai requests beautifulsoup4 pwntools tabulate
@@ -742,7 +742,7 @@ export OPENAI_API_KEY=sk-...
 
 ## Contributing
 
-RAPTOR is open source and welcomes contributions. Areas where help is needed:
+CaPO is open source and welcomes contributions. Areas where help is needed:
 
 ### High Priority
 - Web application scanning implementation
@@ -796,7 +796,7 @@ Use GitHub issues for all contact needs.
 
 ## Acknowledgements
 
-RAPTOR leverages excellent open source tools:
+CaPO leverages excellent open source tools:
 - **Semgrep** (Semgrep Inc.) - Fast pattern-based static analysis. LOVE YOU GUYS AND GIRLS!!!
 - **CodeQL** (GitHub) - Semantic code analysis with dataflow tracking
 - **AFL++** (Andrea Fioraldi et al.) - Coverage-guided fuzzing

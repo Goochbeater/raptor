@@ -1,8 +1,8 @@
-# RAPTOR Fuzzing Mode - Quick Start Guide
+# CaPO Fuzzing Mode - Quick Start Guide
 
 ## What It Does
 
-RAPTOR Fuzzing Mode combines AFL++ fuzzing with LLM-powered crash analysis to:
+CaPO Fuzzing Mode combines AFL++ fuzzing with LLM-powered crash analysis to:
 1. **Fuzz binaries** to find crashes
 2. **Analyze crashes** with GDB for debugging info
 3. **Assess exploitability** using LLM intelligence
@@ -37,7 +37,7 @@ pip3 install requests anthropic openai pwntools
 ```
 
 ### LLM Provider (IMPORTANT)
-RAPTOR supports multiple LLM providers with different quality levels:
+CaPO supports multiple LLM providers with different quality levels:
 
 **For Production Exploit Generation:**
 ```bash
@@ -75,7 +75,7 @@ cd test/
 
 ####  **Pro Tip: Use ASan for Superior Crash Analysis**
 
-RAPTOR automatically detects and uses **AddressSanitizer (ASan)** builds for dramatically better crash diagnostics:
+CaPO automatically detects and uses **AddressSanitizer (ASan)** builds for dramatically better crash diagnostics:
 
 **Why ASan?**
 - **Precise Error Types**: Identifies heap/stack overflows, use-after-free, etc.
@@ -93,7 +93,7 @@ clang -fsanitize=address -g -O2 -o target_asan target.c
 gcc -fsanitize=address -g -O2 -o target_asan target.c
 ```
 
-**RAPTOR Enhancement**: When ASan is detected, RAPTOR:
+**CaPO Enhancement**: When ASan is detected, CaPO:
 - ✅ Uses ASan diagnostics instead of debugger output
 - ✅ Extracts precise vulnerability types (heap-overflow, stack-overflow, etc.)
 - ✅ Provides source-level stack traces
@@ -151,7 +151,7 @@ python3 raptor_fuzzing.py \
 
 ### Autonomous Mode (Intelligent Corpus Generation)
 
-**NEW**: RAPTOR can automatically generate intelligent seed inputs by analysing your binary, eliminating the need for manual corpus creation.
+**NEW**: CaPO can automatically generate intelligent seed inputs by analysing your binary, eliminating the need for manual corpus creation.
 
 #### What Is Autonomous Mode?
 
@@ -469,7 +469,7 @@ sudo apt install afl++  # Ubuntu
 ```
 
 ### "Binary not instrumented" Warning
-This is OK! RAPTOR will use QEMU mode (slower but works).
+This is OK! CaPO will use QEMU mode (slower but works).
 
 For better results, recompile with AFL:
 ```bash

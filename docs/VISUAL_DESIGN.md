@@ -1,4 +1,4 @@
-# RAPTOR Visual Design Elements
+# CaPO Visual Design Elements
 
 ## ASCII Banner (for Python CLI)
 
@@ -30,7 +30,7 @@
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-⚡ RAPTOR ACTIVE
+⚡ CaPO ACTIVE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Commands: /scan | /fuzz | /web | /agentic | /codeql | /analyze

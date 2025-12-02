@@ -1,4 +1,4 @@
-# /scan - RAPTOR Code Security Scan
+# /scan - CaPO Code Security Scan
 
 Alias for /raptor-scan
 

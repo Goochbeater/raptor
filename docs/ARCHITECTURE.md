@@ -1,4 +1,4 @@
-# RAPTOR Modular Architecture
+# CaPO Modular Architecture
 
 **Version**: 2.0 (Modular)
 **Date**: 2025-11-21
@@ -25,7 +25,7 @@
 
 ## Overview
 
-RAPTOR (Recursive Autonomous Penetration Testing and Observation Robot) is a security testing framework that uses LLMs to autonomously analyse code for vulnerabilities, generate exploits, and create patches. The framework operates in three distinct modes:
+CaPO (Recursive Autonomous Penetration Testing and Observation Robot) is a security testing framework that uses LLMs to autonomously analyse code for vulnerabilities, generate exploits, and create patches. The framework operates in three distinct modes:
 
 1. **Source Code Analysis Mode**: Static analysis of source code using Semgrep (`raptor_agentic.py`)
 2. **Deep CodeQL Analysis Mode**: Advanced static analysis with dataflow validation (`raptor_codeql.py`)
@@ -68,7 +68,7 @@ raptor/
 │
 ├── core/                           # Shared utilities layer
 │   ├── __init__.py
-│   ├── config.py                   # RaptorConfig (paths, settings)
+│   ├── config.py                   # CaPOConfig (paths, settings)
 │   ├── logging.py                  # Structured logging with JSONL audit trail
 │   ├── progress.py                 # Progress tracking utilities
 │   └── sarif/
@@ -208,14 +208,14 @@ Provide minimal shared utilities that all packages need.
 
 ### Components
 
-#### `core/config.py` - RaptorConfig
+#### `core/config.py` - CaPOConfig
 **Responsibility**: Centralized configuration management
 
 ```python
-class RaptorConfig:
+class CaPOConfig:
     @staticmethod
     def get_raptor_root() -> Path:
-        """Get RAPTOR installation root"""
+        """Get CaPO installation root"""
 
     @staticmethod
     def get_out_dir() -> Path:
@@ -228,7 +228,7 @@ class RaptorConfig:
 
 **Key Decisions**:
 - Single source of truth for all paths
-- Environment variable support (RAPTOR_ROOT)
+- Environment variable support (CaPO_ROOT)
 - Graceful fallback to auto-detection
 
 #### `core/logging.py` - Structured Logging
@@ -254,7 +254,7 @@ def get_logger(name: str = "raptor") -> logging.Logger:
   "module": "logging",
   "function": "info",
   "line": 111,
-  "message": "RAPTOR logging initialized - audit trail: /path/to/raptor_1762658520.jsonl"
+  "message": "CaPO logging initialized - audit trail: /path/to/raptor_1762658520.jsonl"
 }
 ```
 
@@ -322,7 +322,7 @@ python3 packages/static-analysis/scanner.py \
 # Add parent to path for core access
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from core.config import RaptorConfig
+from core.config import CaPOConfig
 from core.logging import get_logger
 ```
 
@@ -736,7 +736,7 @@ claude-code raptor.py
 - Conversational interface via Claude Code
 - Context-aware persona loading (e.g., load `fuzzing_strategist.md` for /fuzz)
 - Progressive expertise loading to manage context window
-- Integration with all RAPTOR packages
+- Integration with all CaPO packages
 - Safe operations execute immediately, dangerous operations require confirmation
 
 **Design Rationale**: Provides a conversational, user-friendly interface for security testing workflows while leveraging Claude Code's capabilities for interactive analysis and multi-turn reasoning.
@@ -872,7 +872,7 @@ out/fuzz_<binary>_<timestamp>/
 - Comprehensive fuzzing report with costs and statistics
 
 **Mode Selection**:
-RAPTOR operates in two mutually exclusive modes:
+CaPO operates in two mutually exclusive modes:
 - **Source Code Mode** (`--repo`): Static analysis with Semgrep/CodeQL
 - **Binary Fuzzing Mode** (`--binary`): AFL++ fuzzing with crash analysis
 
@@ -936,7 +936,7 @@ Every agent includes:
 ```bash
 $ python3 packages/static-analysis/scanner.py --help
 
-RAPTOR Static Analysis Scanner
+CaPO Static Analysis Scanner
 
 Scans code using Semgrep with configurable policy groups.
 
@@ -960,7 +960,7 @@ Examples:
 
 ### Exploit Generation Requirements
 
-RAPTOR's exploit generation capabilities vary significantly based on the LLM provider used. Understanding these differences is critical for production deployments.
+CaPO's exploit generation capabilities vary significantly based on the LLM provider used. Understanding these differences is critical for production deployments.
 
 ### Provider Comparison
 

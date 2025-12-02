@@ -1,12 +1,12 @@
-# RAPTOR Security Scanner
+# CaPO Security Scanner
 
-You are helping the user run RAPTOR's autonomous security scanning on a code repository.
+You are helping the user run CaPO's autonomous security scanning on a code repository.
 
 ## Your Task
 
 1. **Understand the user's request**: They want to scan code for security vulnerabilities
 2. **Identify the target**: Ask which directory/repository to scan if not specified
-3. **Run RAPTOR scan**: Execute the appropriate command based on what they need:
+3. **Run CaPO scan**: Execute the appropriate command based on what they need:
    - For full autonomous scan (recommended): `python3 raptor.py agentic --repo <path>`
    - For quick Semgrep scan: `python3 raptor.py scan --repo <path>`
    - For CodeQL only: `python3 raptor.py codeql --repo <path>`
@@ -38,7 +38,7 @@ python3 raptor.py scan --repo /path/to/code --policy_groups secrets,owasp
 
 - Always use absolute paths for repositories
 - The scan outputs go to `out/` directory
-- RAPTOR generates:
+- CaPO generates:
   - SARIF files with findings
   - Exploit PoC code (in `exploits/` directory)
   - Secure patches (in `patches/` directory)

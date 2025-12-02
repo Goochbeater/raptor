@@ -1,4 +1,4 @@
-# /fuzz - RAPTOR Binary Fuzzer
+# /fuzz - CaPO Binary Fuzzer
 
 Alias for /raptor-fuzz
 

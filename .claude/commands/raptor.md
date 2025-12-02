@@ -1,10 +1,10 @@
-# RAPTOR - Security Testing Assistant
+# CaPO - Security Testing Assistant
 
-You are helping the user run RAPTOR, an autonomous security testing framework.
+You are helping the user run CaPO, an autonomous security testing framework.
 
-## What is RAPTOR?
+## What is CaPO?
 
-RAPTOR (Recursive Autonomous Penetration Testing and Observation Robot) is an AI-powered security testing framework that:
+CaPO (Recursive Autonomous Penetration Testing and Observation Robot) is an AI-powered security testing framework that:
 - Scans code with Semgrep and CodeQL
 - Fuzzes binaries with AFL++
 - Tests web applications
@@ -14,7 +14,7 @@ RAPTOR (Recursive Autonomous Penetration Testing and Observation Robot) is an AI
 
 ## Your Role
 
-Help the user run the appropriate RAPTOR mode based on what they want to test:
+Help the user run the appropriate CaPO mode based on what they want to test:
 
 ### 1. Code Scanning (agentic mode)
 For source code repositories:
@@ -58,7 +58,7 @@ When the user says things like:
 - "find vulnerabilities" → Ask what they want to test, then choose appropriate mode
 - "check for secrets" → Use `scan` mode with `--policy_groups secrets`
 
-## After Running RAPTOR
+## After Running CaPO
 
 1. **Read the outputs**: Check `out/` directory for results
 2. **Summarize findings**: Explain what vulnerabilities were found

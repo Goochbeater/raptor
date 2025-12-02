@@ -1,4 +1,4 @@
-# RAPTOR Python CLI Reference
+# CaPO Python CLI Reference
 
 For direct command-line usage, scripting, or CI/CD integration.
 
@@ -143,8 +143,8 @@ export OPENAI_API_KEY="sk-..."         # Alternative
 export LLM_PROVIDER="anthropic"        # or "openai" or "local"
 
 # Optional
-export RAPTOR_ROOT="/path/to/raptor"
-export RAPTOR_OUT_DIR="/custom/output/path"
+export CaPO_ROOT="/path/to/raptor"
+export CaPO_OUT_DIR="/custom/output/path"
 ```
 
 ---

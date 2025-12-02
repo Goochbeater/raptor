@@ -1,6 +1,6 @@
-# RAPTOR Binary Fuzzer
+# CaPO Binary Fuzzer
 
-You are helping the user fuzz a binary executable with RAPTOR's AFL++ integration.
+You are helping the user fuzz a binary executable with CaPO's AFL++ integration.
 
 ## Your Task
 
@@ -14,7 +14,7 @@ You are helping the user fuzz a binary executable with RAPTOR's AFL++ integratio
    - AFL++ is properly configured (shared memory limits on macOS)
    - Binary is ideally compiled with AFL instrumentation and ASAN
 
-3. **Run RAPTOR fuzzing**: Execute the fuzzing command:
+3. **Run CaPO fuzzing**: Execute the fuzzing command:
    ```bash
    python3 raptor.py fuzz --binary <path> --duration <seconds>
    ```
@@ -61,6 +61,6 @@ sudo afl-system-config
   - AFL instrumentation: `afl-clang-fast` or `afl-gcc`
   - ASAN: `-fsanitize=address`
 - Crashes are saved to `out/fuzz_<binary>_<timestamp>/afl_output/main/crashes/`
-- RAPTOR automatically analyzes crashes and generates exploits
+- CaPO automatically analyzes crashes and generates exploits
 
 Be patient and explain fuzzing concepts clearly!

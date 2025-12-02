@@ -1,4 +1,4 @@
-# /analyze - RAPTOR LLM Analysis
+# /analyze - CaPO LLM Analysis
 
 Analyzes existing SARIF files with LLM (for findings from previous scans).
 

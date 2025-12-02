@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-RAPTOR Truly Agentic Workflow
+CaPO (Cognitive Attack Pattern Orchestrator) - Legacy Agentic Workflow
 
-Complete end-to-end autonomous security testing:
+Legacy autonomous code security testing (deprecated):
 1. Scan code with Semgrep AND CodeQL (parallel execution)
 2. Autonomously analyse findings (read code, understand context)
 3. Autonomously validate dataflow paths (CodeQL-specific)
@@ -10,6 +10,7 @@ Complete end-to-end autonomous security testing:
 5. Autonomously create patches (write secure fixes)
 6. Report everything
 
+Note: CaPO is now focused on AI jailbreaking. This module remains for reference.
 Phase 3 Integration Complete!
 """
 
@@ -132,7 +133,7 @@ def run_command_streaming(cmd: list, description: str) -> tuple[int, str, str]:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="RAPTOR Agentic Security Testing - Scan, Analyse, Exploit, Patch",
+        description="CaPO Legacy Agentic Security Testing - Scan, Analyse, Exploit, Patch (Deprecated)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
@@ -253,7 +254,7 @@ Examples:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     logger.info("=" * 70)
-    logger.info("RAPTOR AGENTIC WORKFLOW STARTED")
+    logger.info("CaPO LEGACY AGENTIC WORKFLOW STARTED")
     logger.info("=" * 70)
     logger.info(f"Repository: {repo_name}")
     logger.info(f"Full path: {repo_path}")
@@ -506,7 +507,7 @@ Examples:
     workflow_duration = time.time() - workflow_start
 
     print("\n" + "=" * 70)
-    print("🎉 RAPTOR AGENTIC WORKFLOW COMPLETE")
+    print("🎉 CaPO LEGACY AGENTIC WORKFLOW COMPLETE")
     print("=" * 70)
 
     final_report = {
@@ -575,7 +576,7 @@ Examples:
         print(f"   Patches: {autonomous_out / 'patches'}/")
 
     print("\n" + "=" * 70)
-    print("RAPTOR has autonomously:")
+    print("CaPO (legacy mode) has autonomously:")
     if not args.codeql_only:
         print("   ✓ Scanned with Semgrep")
     if args.codeql or args.codeql_only:

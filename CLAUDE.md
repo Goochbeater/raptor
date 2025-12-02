@@ -532,14 +532,16 @@ Systematic, scalable approach:
 
 ---
 
-## Integration with RAPTOR
+## Integration with CaPO
 
-This framework integrates with the existing RAPTOR architecture:
+This framework integrates with the CaPO (Cognitive Attack Pattern Orchestrator) architecture:
 
-**raptor.py launcher:**
-- Add `/jailbreak` command for AI model testing
-- Add `/redteam-ai` for comprehensive AI security assessment
-- Add `/prompt-injection` for injection vector testing
+**capo.py launcher:**
+- `/jailbreak` command for AI model testing
+- `/redteam-ai` for comprehensive AI security assessment
+- `/prompt-injection` for injection vector testing
+- `/payload-gen` for payload variant generation
+- `/boundary-map` for restriction mapping
 
 **New packages:**
 - `packages/ai-security/` - AI model testing tools

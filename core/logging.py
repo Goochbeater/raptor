@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-RAPTOR Structured Logging System
+CaPO (Cognitive Attack Pattern Orchestrator) - Structured Logging System
 
 Provides comprehensive logging with both human-readable console output
 and machine-parsable JSON audit trails.
+
+Legacy code security functionality remains but framework is now focused on AI jailbreaking.
 """
 
 import json

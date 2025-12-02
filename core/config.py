@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-RAPTOR Centralized Configuration Module
+CaPO (Cognitive Attack Pattern Orchestrator) - Configuration Module
 
-This module provides centralized configuration management for the RAPTOR framework,
+This module provides centralized configuration management for the CaPO framework,
 including paths, timeouts, limits, and baseline settings.
+
+Note: Legacy code security tools remain functional but deprecated.
+Primary focus is AI jailbreaking and LLM security research.
 """
 
 import os
@@ -12,7 +15,7 @@ from typing import Dict, List, Tuple
 
 
 class RaptorConfig:
-    """Centralized configuration for RAPTOR framework."""
+    """Centralized configuration for CaPO framework (class name kept for compatibility)."""
 
     # Version
     VERSION = "3.0.0"
@@ -116,6 +119,7 @@ class RaptorConfig:
     def get_out_dir() -> Path:
         """
         Resolve the output directory, honoring RAPTOR_OUT_DIR environment variable.
+        (Env var name kept for compatibility)
 
         Returns:
             Path: Resolved output directory path
